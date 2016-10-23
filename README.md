@@ -20,5 +20,4 @@ After successful build, you will notice a target folder under application folder
 
 How to run:
 1.  For alltransactions use the following command:  java -jar transaction-bot-1.0.jar
-
 2.  For feature#1:  alltransactions ignoring donut amounts, use: java -jar transaction-bot-1.0.jar --ignore-donuts
