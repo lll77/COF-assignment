@@ -1,6 +1,6 @@
 # COF-assignment
 
-This is an spring boot application.  That fetching all user transactions from an endpoint and displays average income and expenditure.  To build this application you will require java, maven.  Eclipse IDE is optional.  After successful build, you will notice an artifact in target folder with a name transaction-bot-1.0.jar.
+This is an spring boot application.  That fetches all user transactions from an endpoint and displays average income and expenditure.  To build this application you will require java, maven.  Eclipse IDE is optional.  After successful build, you will notice an artifact in target folder with a name transaction-bot-1.0.jar.
 
 Pre-requisites:
 1.  You will need a Java Runtime Environment. Please refer to https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html for installation and setup of your Java environment.
