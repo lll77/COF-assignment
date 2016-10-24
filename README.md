@@ -19,5 +19,12 @@ How to build:
 After successful build, you will notice a target folder under application folder with transaction-bot-1.0.jar.  If you are receiving errors, please let me know.
 
 How to run:
-1.  For alltransactions use the following command:  java -jar transaction-bot-1.0.jar
-2.  For feature#1:  alltransactions ignoring donut amounts, use: java -jar transaction-bot-1.0.jar --ignore-donuts
+
+1.  For displaying monthly transactions use:
+    java -jar transaction-bot-1.0.jar
+    
+2.  For feature#1: display monthly transactions ignoring donut amounts, use: 
+    java -jar transaction-bot-1.0.jar --ignore-donuts
+    
+3.  For feature#2: display monthly transactions ignoring credit card payments, use: 
+    java -jar transaction-bot-1.0.jar --ignore-cc-payments
