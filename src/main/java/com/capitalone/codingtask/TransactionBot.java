@@ -44,11 +44,15 @@ public class TransactionBot implements UserTransaction
         String apiToken = ctx.getEnvironment().getProperty(API_TOKEN_VALUE);
         Validate.notNull(apiToken, API_TOKEN_VALIDATION_MSG);
         
+        String projTransMonthEP = ctx.getEnvironment().getProperty(PROJ_TRANSACTIONS_MONTH_ENDPOINT);
+        Validate.notNull(projTransMonthEP, PROJ_TRANSACTIONS_MONTH_ENDPOINT_VALIDATION_MSG);
+        
     	Map<String,Object> requestParameters = new HashMap<String,Object>();
     	requestParameters.put(REQUEST_PARAM_ENDPOINT, allTransactionsEndpoint);
     	requestParameters.put(REQUEST_PARAM_AUTHTOKEN, authToken);
     	requestParameters.put(REQUEST_PARAM_USERID, Integer.parseInt(userId));
     	requestParameters.put(REQUEST_PARAM_APITOKEN, apiToken);
+    	requestParameters.put(REQUEST_PARAM_MON_PROJ_ENDPOINT, projTransMonthEP);
         
     	TransactionService transactionService = new TransactionService();
         //default case with no args and handle args for other to-have features, implement atleast one
@@ -74,7 +78,8 @@ public class TransactionBot implements UserTransaction
         		transactionService.ignoreCreditCardPayments(requestParameters);
         	}else if (inputArgument !=null && inputArgument.trim().length()>0 && inputArgument.equals(CRYSTAL_BALL)){
         		log.info("crystal ball option...");
-        		System.out.println("Crystal Ball option not implemented yet.");
+        		requestParameters.put(REQUEST_PARAM_EXCLUDE_DONUTS,false);
+        		transactionService.crystalBallReport(requestParameters);
         	}else{
         		System.out.println("Invalid argument.");
         	}

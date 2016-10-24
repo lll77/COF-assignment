@@ -14,7 +14,11 @@ public class TransactionBotConstants {
 	
 	public static final String ALL_TRANSACTIONS_ENDPOINT = "allTransactions.endpoint";
 	
-	public static final String ALL_TRANSACTIONS_ENDPOINT_VALIDATION_MSG = "Endpoint should not be null.";
+	public static final String ALL_TRANSACTIONS_ENDPOINT_VALIDATION_MSG = "All Transaction endpoint should not be null.";
+	
+	public static final String PROJ_TRANSACTIONS_MONTH_ENDPOINT = "getProjectedTransactionsForMonth.endpoint";
+	
+	public static final String PROJ_TRANSACTIONS_MONTH_ENDPOINT_VALIDATION_MSG = "Projected monthly transaction endpoint should not be null.";
 	
 	public static final String AUTH_TOKEN = "authToken";
 	
@@ -28,7 +32,9 @@ public class TransactionBotConstants {
 	
 	public static final String API_TOKEN_VALIDATION_MSG = "API Token should not be null.";
 	
-	public static final String REQUEST_PARAM_ENDPOINT = "endPoint";
+	public static final String REQUEST_PARAM_ENDPOINT = "endPoint";//allTransactions
+	
+	public static final String REQUEST_PARAM_MON_PROJ_ENDPOINT = "monProjEndPoint";//monthlyProjEndPoint
 	
 	public static final String REQUEST_PARAM_AUTHTOKEN = "authToken";
 	
@@ -47,5 +53,9 @@ public class TransactionBotConstants {
 	public static final String CRYSTAL_BALL = "--crystal-ball";
 	
 	public static final String IGNORE_CC_PAYMENTS = "--ignore-cc-payments";
+	
+	public static final String YEAR = "year";
+	
+	public static final String MONTH = "month";
 	
 }
