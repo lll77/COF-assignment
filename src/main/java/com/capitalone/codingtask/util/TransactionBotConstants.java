@@ -42,4 +42,10 @@ public class TransactionBotConstants {
 	
 	public static final String KRISPY_STORE = "Krispy Kreme Donuts";
 	
+	public static final String IGNORE_DONUTS = "--ignore-donuts";
+	
+	public static final String CRYSTAL_BALL = "--crystal-ball";
+	
+	public static final String IGNORE_CC_PAYMENTS = "--ignore-cc-payments";
+	
 }

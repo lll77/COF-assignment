@@ -25,8 +25,7 @@ import static com.capitalone.codingtask.util.TransactionBotConstants.*;
 
 
 /**
- * Interface for all (2 i.e.,) user transaction get operations. Using default
- * implementations for this specific coding-task scenario.
+ * Interface for endpoint operations. Using default method implementations for this specific coding-task scenario.
  * 
  * @author MalgariV
  *
@@ -46,8 +45,9 @@ public interface UserTransaction {
 	String JSON_VERBOSE_RESPONSE = "json-verbose-response";
 	String ARGS = "args";
 	
-	/*
-	 * 
+	/**
+	 *   Loads a user's transactions from the GetAllTransactions endpoint.
+	 *   @param  requestParameters
 	 */
 
 	default TransactionSearchResponse getAllUserTransactions(Map<String,Object> requestParameters)
@@ -57,7 +57,7 @@ public interface UserTransaction {
 		String authToken = (String) requestParameters.get(REQUEST_PARAM_AUTHTOKEN);
 		Integer userId = (Integer) requestParameters.get(REQUEST_PARAM_USERID);
 		String apiToken = (String) requestParameters.get(REQUEST_PARAM_APITOKEN) ;
-		Boolean ignoreDonuts = (Boolean)requestParameters.get(REQUEST_PARAM_EXCLUDE_DONUTS);
+		//Boolean ignoreDonuts = (Boolean)requestParameters.get(REQUEST_PARAM_EXCLUDE_DONUTS);
 
 		TransactionSearchResponse transactionSearchResponse = new TransactionSearchResponse();
 

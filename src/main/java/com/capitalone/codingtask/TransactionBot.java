@@ -51,7 +51,7 @@ public class TransactionBot implements UserTransaction
     	requestParameters.put(REQUEST_PARAM_APITOKEN, apiToken);
         
     	TransactionService transactionService = new TransactionService();
-        //TODO default case with no args and handle args for other to-have features, implement atleast one
+        //default case with no args and handle args for other to-have features, implement atleast one
         if (args.length == 0){
         	//default case get all transactions
         	log.info("no runtime arguments passed, fetching alltransactions");
@@ -65,12 +65,19 @@ public class TransactionBot implements UserTransaction
         }else if (args.length == 1){
         	//implement features, atleast one here as per requirement.
         	String inputArgument = args[0];
-        	if (inputArgument !=null && inputArgument.trim().length()>0 && inputArgument.equals("--ignore-donuts")){
-        		log.info("ignore donuts...");
+        	if (inputArgument !=null && inputArgument.trim().length()>0 && inputArgument.equals(IGNORE_DONUTS)){
+        		log.info("ignore donuts option...");
         		requestParameters.put(REQUEST_PARAM_EXCLUDE_DONUTS,true);//default case include donuts in debit
         		transactionService.monthlyTransactionAnalysis(requestParameters);
+        	}else if (inputArgument !=null && inputArgument.trim().length()>0 && inputArgument.equals(IGNORE_CC_PAYMENTS)){
+        		log.info("ignore credit card payments option...");
+        		transactionService.ignoreCreditCardPayments(requestParameters);
+        	}else if (inputArgument !=null && inputArgument.trim().length()>0 && inputArgument.equals(CRYSTAL_BALL)){
+        		log.info("crystal ball option...");
+        		System.out.println("Crystal Ball option not implemented yet.");
+        	}else{
+        		System.out.println("Invalid argument.");
         	}
-        	
         }
         log.info("<end-of-program>");
     }
