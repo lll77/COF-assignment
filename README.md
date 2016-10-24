@@ -28,3 +28,6 @@ How to run:
     
 3.  For feature#2: display monthly transactions ignoring credit card payments, use: 
     java -jar transaction-bot-1.0.jar --ignore-cc-payments
+
+4.  For feature#3 display predicted spending, income use:
+    java -jar transaction-bot-1.0.jar --crystal-ball    
